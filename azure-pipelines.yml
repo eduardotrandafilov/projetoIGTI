@@ -38,9 +38,8 @@ steps:
     scannerMode: 'CLI'
     configMode: 'manual'
     cliProjectKey: 'analia'
-    cliProjectName: 'promove.analia'
-    cliSources: 'build.artifactStagingDirectory'
-  
+    cliProjectName: 'analia'
+    cliSources: $(build.artifactStagingDirectory)/MobEAD/Scripts
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
