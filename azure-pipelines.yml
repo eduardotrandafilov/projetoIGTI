@@ -31,15 +31,18 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
+
 - task: SonarCloudPrepare@1
+  displayName: 'Prepare analysis on SonarCloud'
   inputs:
-    SonarCloud: 'SONAR'
-    organization: 'promove'
-    scannerMode: 'CLI'
-    configMode: 'manual'
-    cliProjectKey: 'analia'
-    cliProjectName: 'analia'
-    cliSources: $(build.artifactStagingDirectory)/MobEAD/Scripts
+    SonarCloud: SONAR
+    organization: promove
+    scannerMode: CLI
+    configMode: manual
+    cliProjectKey: analia
+    cliProjectName: Analia
+    cliSources: '$(System.DefaultWorkingDirectory)/_analiairigoyen.IGITIExemplo/MobEAD/Scripts'
+
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
