@@ -31,6 +31,16 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'SONAR'
+    organization: 'promove'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'analia'
+    cliProjectName: 'analia'
+    cliSources: 'build.artifactStagingDirectory'
+  
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
@@ -44,6 +54,11 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     testAssemblyVer2: '$(Build.SourcesDirectory)/test**.js'
+
+- task: SonarCloudAnalyze@1
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
  
 - task: CopyFiles@2
   inputs:
