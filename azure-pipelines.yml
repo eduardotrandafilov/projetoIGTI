@@ -38,7 +38,7 @@ steps:
     scannerMode: 'CLI'
     configMode: 'manual'
     cliProjectKey: 'analia'
-    cliProjectName: 'analia'
+    cliProjectName: 'promove.analia'
     cliSources: 'build.artifactStagingDirectory'
   
 - task: VSBuild@1
