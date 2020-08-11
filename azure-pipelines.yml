@@ -41,7 +41,7 @@ steps:
     configMode: manual
     cliProjectKey: analia
     cliProjectName: Analia
-    cliSources: '$(System.DefaultWorkingDirectory)/_analiairigoyen.IGITIExemplo/MobEAD/Scripts'
+    cliSources: '$(System.DefaultWorkingDirectory)'
 
 - task: VSBuild@1
   inputs:
