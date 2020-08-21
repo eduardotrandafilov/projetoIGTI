@@ -29,7 +29,7 @@ steps:
 
 - task: SonarCloudPrepare@1
   inputs:
-    SonarCloud: 'SonarCloud'
+    SonarCloud: 'SONAR'
     organization: 'promove'
     scannerMode: 'CLI'
     configMode: 'manual'
