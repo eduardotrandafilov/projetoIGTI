@@ -33,7 +33,7 @@ steps:
     organization: 'promove'
     scannerMode: 'CLI'
     configMode: 'manual'
-    cliProjectKey: 'Analia'
+    cliProjectKey: analia
     cliProjectName: Analia
     cliSources: '$(System.DefaultWorkingDirectory)'
   continueOnError: true
